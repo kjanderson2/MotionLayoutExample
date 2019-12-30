@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">MotionLayoutExample</string>
+    <string name="initials">KA</string>
+    <string name="name">Kaitlyn</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sed leo tristique, molestie nibh eu, imperdiet odio. Vestibulum ante ipsum.</string>
+    <string name="profile_url">https://avatars2.githubusercontent.com/u/7631856?s=460&amp;v=4</string>
 </resources>
