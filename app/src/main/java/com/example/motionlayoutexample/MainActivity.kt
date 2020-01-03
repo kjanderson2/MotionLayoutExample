@@ -1,7 +1,5 @@
 package com.example.motionlayoutexample
 
-import android.animation.Animator
-import android.animation.AnimatorListenerAdapter
 import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.util.Log
@@ -20,13 +18,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        imageBorder.setOnClickListener {
-            if (motionContainer.progress > 0.75)
-                motionContainer.transitionToStart()
-            else
-                motionContainer.transitionToEnd()
-        }
 
         profileInitialText.text = getString(R.string.initials)
 
@@ -71,20 +62,7 @@ class MainActivity : AppCompatActivity() {
                         .start()
             }
 
-    private fun fadeOutView(fadeOutView: View, onFinish: (() -> Unit)? = null) =
-            fadeOutView
-                    .animate()
-                    .alpha(0f)
-                    .setListener(object : AnimatorListenerAdapter() {
-                        override fun onAnimationEnd(animation: Animator) {
-                            fadeOutView.visibility = View.GONE
-                            onFinish?.invoke()
-                        }
-                    })
-                    .start()
-
     companion object {
         private val TAG = MainActivity::class.java.simpleName
     }
-
 }

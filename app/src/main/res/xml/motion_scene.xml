@@ -4,8 +4,11 @@
     <Transition
         motion:constraintSetEnd="@+id/end"
         motion:constraintSetStart="@+id/start"
-        motion:duration="300"
-        motion:motionInterpolator="easeInOut">
+        motion:duration="1000"
+        motion:motionInterpolator="easeInOut"
+        motion:staggered="0.6" >
+        <OnClick motion:clickAction="toggle"
+            motion:targetId="@+id/imageBorder" />
     </Transition>
 
     <ConstraintSet android:id="@+id/start">
@@ -20,7 +23,7 @@
             <CustomAttribute
                 motion:attributeName="alpha"
                 motion:customFloatValue="0.0" />
-            <Motion motion:motionStagger="1" />
+            <Motion motion:motionStagger="3" />
         </Constraint>
 
         <Constraint android:id="@id/imageBorder">
@@ -36,7 +39,7 @@
             <CustomAttribute
                 motion:attributeName="crossfade"
                 motion:customFloatValue="0" />
-            <Motion motion:motionStagger="1" />
+            <Motion motion:motionStagger="3" />
         </Constraint>
 
         <Constraint android:id="@id/imageBackground">
@@ -47,11 +50,10 @@
                 motion:layout_constraintEnd_toEndOf="@id/imageBorder"
                 motion:layout_constraintStart_toStartOf="@id/imageBorder"
                 motion:layout_constraintTop_toTopOf="@id/imageBorder" />
-            <Motion motion:motionStagger="1" />
+            <Motion motion:motionStagger="3" />
         </Constraint>
 
-        <Constraint android:id="@id/profileInitialText"
-            android:visibility="visible">
+        <Constraint android:id="@id/profileInitialText">
             <Layout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -60,9 +62,9 @@
                 motion:layout_constraintStart_toStartOf="@id/imageBackground"
                 motion:layout_constraintTop_toTopOf="@id/imageBackground" />
             <CustomAttribute
-                motion:attributeName="textSize"
-                motion:customFloatValue="14" />
-            <Motion motion:motionStagger="1" />
+                motion:attributeName="alpha"
+                motion:customFloatValue="1.0" />
+            <Motion motion:motionStagger="3" />
         </Constraint>
 
         <Constraint android:id="@id/profileImage">
@@ -73,24 +75,33 @@
                 motion:layout_constraintEnd_toEndOf="@id/imageBackground"
                 motion:layout_constraintStart_toStartOf="@id/imageBackground"
                 motion:layout_constraintTop_toTopOf="@id/imageBackground" />
-            <Motion motion:motionStagger="1" />
+            <Motion motion:motionStagger="3" />
         </Constraint>
 
-        <Constraint
-            android:id="@id/name"
-            android:visibility="gone">
+        <Constraint android:id="@id/name">
             <Layout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-            <Motion motion:motionStagger="1" />
+                android:layout_height="wrap_content"
+                android:layout_marginTop="128dp"
+                motion:layout_constraintEnd_toEndOf="parent"
+                motion:layout_constraintStart_toStartOf="parent"
+                motion:layout_constraintTop_toTopOf="parent" />
+            <CustomAttribute
+                motion:attributeName="alpha"
+                motion:customFloatValue="0.0" />
+            <Motion motion:motionStagger="2" />
         </Constraint>
 
-        <Constraint
-            android:id="@id/description"
-            android:visibility="gone">
+        <Constraint android:id="@id/description">
             <Layout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                motion:layout_constraintEnd_toEndOf="parent"
+                motion:layout_constraintStart_toStartOf="parent"
+                motion:layout_constraintTop_toBottomOf="@id/name" />
+            <CustomAttribute
+                motion:attributeName="alpha"
+                motion:customFloatValue="0.0" />
             <Motion motion:motionStagger="1" />
         </Constraint>
     </ConstraintSet>
@@ -103,7 +114,7 @@
             <CustomAttribute
                 motion:attributeName="alpha"
                 motion:customFloatValue="1.0" />
-            <Motion motion:motionStagger="1" />
+            <Motion motion:motionStagger="3" />
         </Constraint>
 
         <Constraint android:id="@id/imageBorder">
@@ -117,7 +128,7 @@
             <CustomAttribute
                 motion:attributeName="crossfade"
                 motion:customFloatValue="1" />
-            <Motion motion:motionStagger="1" />
+            <Motion motion:motionStagger="3" />
         </Constraint>
 
         <Constraint android:id="@id/imageBackground">
@@ -128,11 +139,10 @@
                 motion:layout_constraintEnd_toEndOf="parent"
                 motion:layout_constraintStart_toStartOf="parent"
                 motion:layout_constraintTop_toTopOf="parent" />
-            <Motion motion:motionStagger="1" />
+            <Motion motion:motionStagger="3" />
         </Constraint>
 
-        <Constraint android:id="@id/profileInitialText"
-            android:visibility="gone">
+        <Constraint android:id="@id/profileInitialText">
             <Layout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -140,10 +150,10 @@
                 motion:layout_constraintEnd_toEndOf="@id/imageBackground"
                 motion:layout_constraintStart_toStartOf="@id/imageBackground"
                 motion:layout_constraintTop_toTopOf="@id/imageBackground" />
-            <Motion motion:motionStagger="1" />
+            <Motion motion:motionStagger="3" />
             <CustomAttribute
-                motion:attributeName="textSize"
-                motion:customFloatValue="20" />
+                motion:attributeName="alpha"
+                motion:customFloatValue="0.0" />
         </Constraint>
         <Constraint android:id="@id/profileImage">
             <Layout
@@ -153,12 +163,10 @@
                 motion:layout_constraintEnd_toEndOf="@id/imageBackground"
                 motion:layout_constraintStart_toStartOf="@id/imageBackground"
                 motion:layout_constraintTop_toTopOf="@id/imageBackground" />
-            <Motion motion:motionStagger="1" />
+            <Motion motion:motionStagger="3" />
         </Constraint>
 
-        <Constraint
-            android:id="@id/name"
-            android:visibility="visible">
+        <Constraint android:id="@id/name">
             <Layout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -166,12 +174,13 @@
                 motion:layout_constraintEnd_toEndOf="parent"
                 motion:layout_constraintStart_toStartOf="parent"
                 motion:layout_constraintTop_toBottomOf="@id/profileImage" />
-            <Motion motion:motionStagger="1" />
+            <CustomAttribute
+                motion:attributeName="alpha"
+                motion:customFloatValue="1.0" />
+            <Motion motion:motionStagger="2" />
         </Constraint>
 
-        <Constraint
-            android:id="@id/description"
-            android:visibility="visible">
+        <Constraint android:id="@id/description">
             <Layout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -181,6 +190,9 @@
                 motion:layout_constraintEnd_toEndOf="parent"
                 motion:layout_constraintStart_toStartOf="parent"
                 motion:layout_constraintTop_toBottomOf="@id/name" />
+            <CustomAttribute
+                motion:attributeName="alpha"
+                motion:customFloatValue="1.0" />
             <Motion motion:motionStagger="1" />
         </Constraint>
     </ConstraintSet>
