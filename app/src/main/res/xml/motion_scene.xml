@@ -4,7 +4,7 @@
     <Transition
         motion:constraintSetEnd="@+id/end"
         motion:constraintSetStart="@+id/start"
-        motion:duration="1000"
+        motion:duration="600"
         motion:motionInterpolator="easeInOut"
         motion:staggered="0.6" >
         <OnClick motion:clickAction="toggle"
@@ -23,6 +23,9 @@
             <CustomAttribute
                 motion:attributeName="alpha"
                 motion:customFloatValue="0.0" />
+            <CustomAttribute
+                motion:attributeName="roundPercent"
+                motion:customFloatValue="1" />
             <Motion motion:motionStagger="3" />
         </Constraint>
 
@@ -42,25 +45,14 @@
             <Motion motion:motionStagger="3" />
         </Constraint>
 
-        <Constraint android:id="@id/imageBackground">
-            <Layout
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                motion:layout_constraintBottom_toBottomOf="@id/imageBorder"
-                motion:layout_constraintEnd_toEndOf="@id/imageBorder"
-                motion:layout_constraintStart_toStartOf="@id/imageBorder"
-                motion:layout_constraintTop_toTopOf="@id/imageBorder" />
-            <Motion motion:motionStagger="3" />
-        </Constraint>
-
         <Constraint android:id="@id/profileInitialText">
             <Layout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                motion:layout_constraintBottom_toBottomOf="@id/imageBackground"
-                motion:layout_constraintEnd_toEndOf="@id/imageBackground"
-                motion:layout_constraintStart_toStartOf="@id/imageBackground"
-                motion:layout_constraintTop_toTopOf="@id/imageBackground" />
+                motion:layout_constraintBottom_toBottomOf="@id/imageBorder"
+                motion:layout_constraintEnd_toEndOf="@id/imageBorder"
+                motion:layout_constraintStart_toStartOf="@id/imageBorder"
+                motion:layout_constraintTop_toTopOf="@id/imageBorder" />
             <CustomAttribute
                 motion:attributeName="alpha"
                 motion:customFloatValue="1.0" />
@@ -71,10 +63,10 @@
             <Layout
                 android:layout_width="32dp"
                 android:layout_height="32dp"
-                motion:layout_constraintBottom_toBottomOf="@id/imageBackground"
-                motion:layout_constraintEnd_toEndOf="@id/imageBackground"
-                motion:layout_constraintStart_toStartOf="@id/imageBackground"
-                motion:layout_constraintTop_toTopOf="@id/imageBackground" />
+                motion:layout_constraintBottom_toBottomOf="@id/imageBorder"
+                motion:layout_constraintEnd_toEndOf="@id/imageBorder"
+                motion:layout_constraintStart_toStartOf="@id/imageBorder"
+                motion:layout_constraintTop_toTopOf="@id/imageBorder" />
             <Motion motion:motionStagger="3" />
         </Constraint>
 
@@ -114,6 +106,9 @@
             <CustomAttribute
                 motion:attributeName="alpha"
                 motion:customFloatValue="1.0" />
+            <CustomAttribute
+                motion:attributeName="roundPercent"
+                motion:customFloatValue="0.000001" />
             <Motion motion:motionStagger="3" />
         </Constraint>
 
@@ -121,24 +116,13 @@
             <Layout
                 android:layout_width="88dp"
                 android:layout_height="88dp"
-                motion:layout_constraintBottom_toBottomOf="@id/imageBackground"
-                motion:layout_constraintEnd_toEndOf="@id/imageBackground"
-                motion:layout_constraintStart_toStartOf="@id/imageBackground"
-                motion:layout_constraintTop_toTopOf="@id/imageBackground" />
-            <CustomAttribute
-                motion:attributeName="crossfade"
-                motion:customFloatValue="1" />
-            <Motion motion:motionStagger="3" />
-        </Constraint>
-
-        <Constraint android:id="@id/imageBackground">
-            <Layout
-                android:layout_width="70dp"
-                android:layout_height="70dp"
                 android:layout_marginTop="64dp"
                 motion:layout_constraintEnd_toEndOf="parent"
                 motion:layout_constraintStart_toStartOf="parent"
                 motion:layout_constraintTop_toTopOf="parent" />
+            <CustomAttribute
+                motion:attributeName="crossfade"
+                motion:customFloatValue="1" />
             <Motion motion:motionStagger="3" />
         </Constraint>
 
@@ -146,10 +130,10 @@
             <Layout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                motion:layout_constraintBottom_toBottomOf="@id/imageBackground"
-                motion:layout_constraintEnd_toEndOf="@id/imageBackground"
-                motion:layout_constraintStart_toStartOf="@id/imageBackground"
-                motion:layout_constraintTop_toTopOf="@id/imageBackground" />
+                motion:layout_constraintBottom_toBottomOf="@id/imageBorder"
+                motion:layout_constraintEnd_toEndOf="@id/imageBorder"
+                motion:layout_constraintStart_toStartOf="@id/imageBorder"
+                motion:layout_constraintTop_toTopOf="@id/imageBorder" />
             <Motion motion:motionStagger="3" />
             <CustomAttribute
                 motion:attributeName="alpha"
@@ -159,10 +143,10 @@
             <Layout
                 android:layout_width="70dp"
                 android:layout_height="70dp"
-                motion:layout_constraintBottom_toBottomOf="@id/imageBackground"
-                motion:layout_constraintEnd_toEndOf="@id/imageBackground"
-                motion:layout_constraintStart_toStartOf="@id/imageBackground"
-                motion:layout_constraintTop_toTopOf="@id/imageBackground" />
+                motion:layout_constraintBottom_toBottomOf="@id/imageBorder"
+                motion:layout_constraintEnd_toEndOf="@id/imageBorder"
+                motion:layout_constraintStart_toStartOf="@id/imageBorder"
+                motion:layout_constraintTop_toTopOf="@id/imageBorder" />
             <Motion motion:motionStagger="3" />
         </Constraint>
 

@@ -19,8 +19,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        profileInitialText.text = getString(R.string.initials)
-
         Glide.with(this)
                 .load(getString(R.string.profile_url))
                 .listener(glideRequestListener)
